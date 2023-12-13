@@ -50,9 +50,8 @@ def upload():
             img = img.resize((800, 480))  # Resize to 800x600
 
             img = img.convert('L') # monochrome
+            img.tobitmap()
             
-            img.save('/tmp/uploaded_image.bmp', 'BMP')  # Save locally
-
             renderImage(img)
             
             return 'Image uploaded and resized successfully!'
