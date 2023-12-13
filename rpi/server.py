@@ -86,7 +86,7 @@ def renderImage(img):
     epd.Clear()
 
     logging.info("Drawing image")
-    Himage = Image.new('1', (epd.width, epd.height, 255)) # Create all white image
+    Himage = Image.new('1', (epd.width, epd.height), 255)) # Create all white image
 
     logging.info("Rendering image")
     epd.display(epd.getbuffer(Himage)) # Render image
@@ -101,7 +101,7 @@ def renderText(text):
     epd.Clear()
 
     logging.info("Drawing image")
-    Himage = Image.new('1', (epd.width, epd.height, 255)) # Create all white image
+    Himage = Image.new('1', (epd.width, epd.height), 255)) # Create all white image
     draw = ImageDraw.Draw(Himage)
     draw.text((18, 18), text, font = font18, fill = 0);
 
