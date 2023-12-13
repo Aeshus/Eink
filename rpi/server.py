@@ -86,6 +86,7 @@ def renderImage(img):
 
     logging.info("Drawing image")
     Himage = Image.new('1', (epd.width, epd.height), 255) # Create all white image
+    Himage.paste(img, (0, 0))
 
     logging.info("Rendering image")
     epd.display(epd.getbuffer(Himage)) # Render image
