@@ -49,8 +49,8 @@ def upload():
 
             img = img.resize((800, 480))  # Resize to 800x600
 
-            img = img.convert('L') # monochrome
-            img.tobitmap()
+            # img = img.convert('L') # monochrome
+            # img.tobitmap()
             
             renderImage(img)
             
